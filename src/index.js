@@ -1,20 +1,43 @@
-import _ from 'lodash';
 import './style.css';
-import Icon from './icon.png';
 
-function component() {
-  const element = document.createElement('div');
+// declare an array and add some objects
+const toDoList = [
+  {
+    description: 'Learn ES6 module concept',
+    completed: true,
+    index: 0,
+  },
+  {
+    description: 'Creat a project using webpack',
+    completed: false,
+    index: 1,
+  },
+  {
+    description: 'Structure the to do list project',
+    completed: true,
+    index: 2,
+  },
+  {
+    description: 'Finish to do list project',
+    completed: true,
+    index: 3,
+  },
+];
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+// grab the element for display the list
 
-  // Add the image to our existing div.
-  const myIcon = new Image();
-  myIcon.src = Icon;
+const list = document.querySelector('.list');
 
-  element.appendChild(myIcon);
-  return element;
-}
+const populateItem = (taskList) => {
+  list.innerHTML += `
+  <li class = 'item'>
+  <div class = 'listItem'>
+  <input type="checkbox" name="task" value="task">
+<label for="task">${taskList.description}</label>
+</div>
+<i class="fa-solid fa-ellipsis-vertical"></i>
+</li>
+  `;
+};
 
-document.body.appendChild(component());
+toDoList.forEach(populateItem);
