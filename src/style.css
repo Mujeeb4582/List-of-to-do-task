@@ -70,14 +70,13 @@ header {
 }
 
 .fa-arrow-turn-down {
-  transform:rotate(90deg);
+  transform: rotate(90deg);
   color: #a1a1a1;
 }
 
 .list {
   list-style: none;
   width: 100%;
-
 }
 
 .item {
