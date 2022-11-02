@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f2f5;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+}
+
+.list-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: #fff;
+  box-shadow: 0 1px 4px;
+  border-radius: 8px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+  padding: 8px 12px;
+}
+
+.heading {
+  font-size: 24px;
+}
+
+.fa-rotate {
+  font-size: 20px;
+  color: green;
+}
+
+.addItems {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 8px 12px;
+}
+
+.to-do {
+  font-size: 18px;
+  font-style: italic;
+  border: none;
+  width: 100%;
+  outline: none;
+  resize: none;
+}
+
+.addTask {
+  background-color: #fff;
+  border: none;
+}
+
+.fa-arrow-turn-down {
+  transform: rotate(90deg);
+  color: #a1a1a1;
+}
+
+.list {
+  list-style: none;
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 8px 12px;
+  font-size: 18px;
+}
+
+.listItem label {
+  padding: 8px 12px;
+}
+
+.clearTask {
+  border: none;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 18px;
+}
