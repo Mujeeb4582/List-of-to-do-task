@@ -21,7 +21,6 @@ To get a local copy up and running follow these simple steps.
 - **Type the following lists of commands and press ENTER after each command:**
   - *Basic Setup*
     - npm install --save-dev
-
   - *Setup linters*
     - npm install --save-dev hint@7.x
     - npx hint .
