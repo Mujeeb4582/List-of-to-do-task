@@ -1,99 +1,139 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-* {
+body {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f1f2f5;
   width: 100%;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
+  background-color: rgb(248, 247, 247);
 }
 
-.list-wrapper {
+main {
+  width: 70%;
+  margin: 50px auto;
+}
+
+i {
+  cursor: pointer;
+  color: rgb(207, 199, 199);
+}
+
+.to-do-list {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
+  flex-flow: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   background-color: #fff;
-  box-shadow: 0 1px 4px;
-  border-radius: 8px;
+  box-shadow: 0 2px 8px;
 }
 
-header {
+.to-do-list > * {
+  display: flex;
+  border-bottom: 1px solid rgb(248, 247, 247);
+  flex: 1;
+  padding: 1rem;
+}
+
+.title {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title h3 {
+  margin: 0;
+}
+
+#form {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  width: 100%;
   align-items: center;
-  border-bottom: 1px solid gainsboro;
-  padding: 8px 12px;
 }
 
-.heading {
+#form input {
+  border: 1px hidden;
+  flex-basis: 90%;
+  outline: none;
+  font-size: 1rem;
+  color: #000;
+}
+
+#form input[placeholder] {
+  font-style: italic;
+}
+
+#form button {
+  border: 1px hidden;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#form i {
+  transform: rotate(0.5turn);
+}
+
+.task-list {
+  display: none;
+  padding: 0;
+}
+
+.allTodos {
+  padding: 0;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(248, 247, 247);
+  flex: 1;
+  padding: 1rem;
+}
+
+.todo:hover {
+  cursor: text;
+  background-color: #e63946;
+}
+
+.todo div {
+  flex-basis: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.todo p {
+  flex-basis: 95%;
+  margin: 0;
+  color: #000;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+.todo p:hover {
+  color: #fff;
+}
+
+.fa-trash,
+.fa-ellipsis-v {
+  color: #000;
   font-size: 24px;
 }
 
-.fa-rotate {
-  font-size: 20px;
-  color: green;
+#checkbox {
+  width: 20px;
+  height: 20px;
 }
 
-.addItems {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  border-bottom: 1px solid #dcdcdc;
-  padding: 8px 12px;
+#clearCompleted {
+  background-color: #dcdcdc;
+  justify-content: center;
+  cursor: pointer;
 }
 
-.to-do {
-  font-size: 18px;
-  font-style: italic;
-  border: none;
-  width: 100%;
-  outline: none;
-  resize: none;
-}
-
-.addTask {
-  background-color: #fff;
-  border: none;
-}
-
-.fa-arrow-turn-down {
-  transform: rotate(90deg);
-  color: #a1a1a1;
-}
-
-.list {
-  list-style: none;
-  width: 100%;
-}
-
-.item {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #dcdcdc;
-  padding: 8px 12px;
-  font-size: 18px;
-}
-
-.listItem label {
-  padding: 8px 12px;
-}
-
-.clearTask {
-  border: none;
-  width: 100%;
-  padding: 8px 12px;
-  font-size: 18px;
+#clear {
+  border: 1px hidden;
+  background-color: #dcdcdc;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
 }

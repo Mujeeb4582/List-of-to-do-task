@@ -1,43 +1,13 @@
 import './style.css';
+import populate from './module/populatetask.js';
+import { getAddedTodos, form } from './module/newTask.js';
+import deleteTask from './module/removeTask.js';
 
-// declare an array and add some objects
-const toDoList = [
-  {
-    description: 'Learn ES6 module concept',
-    completed: true,
-    index: 0,
-  },
-  {
-    description: 'Creat a project using webpack',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Structure the to do list project',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'Finish to do list project',
-    completed: true,
-    index: 3,
-  },
-];
+populate();
+form.addEventListener('submit', getAddedTodos);
 
-// grab the element for display the list
-
-const list = document.querySelector('.list');
-
-const populateItem = (taskList) => {
-  list.innerHTML += `
-  <li class = 'item'>
-  <div class = 'listItem'>
-  <input type="checkbox" name="task" value="task">
-<label for="task">${taskList.description}</label>
-</div>
-<i class="fa-solid fa-ellipsis-vertical"></i>
-</li>
-  `;
-};
-
-toDoList.forEach(populateItem);
+document.addEventListener('click', (e) => {
+  if (e.target.className === 'fa fa-trash') {
+    deleteTask(e.target.id);
+  }
+});
