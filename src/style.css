@@ -8,7 +8,6 @@ body {
 main {
   width: 70%;
   margin: 50px auto;
-
 }
 
 i {
@@ -90,7 +89,7 @@ i {
 }
 
 .todo:hover {
-  cursor:text;
+  cursor: text;
   background-color: #e63946;
 }
 
