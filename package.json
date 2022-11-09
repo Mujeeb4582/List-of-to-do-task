@@ -4,7 +4,7 @@
   "description": "A website that lets you add list of to do task. It uses local-storage to store the data.",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
     "start": "webpack serve --open",
     "server": "node server.js",
     "build": "webpack"
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Mujeeb4582/List-of-to-do-task#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.19.6",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
@@ -29,6 +30,8 @@
     "express": "^4.18.2",
     "hint": "^7.1.3",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
     "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
