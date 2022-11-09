@@ -4,7 +4,7 @@
   "description": "A website that lets you add list of to do task. It uses local-storage to store the data.",
   "private": true,
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest",
     "start": "webpack serve --open",
     "server": "node server.js",
     "build": "webpack"
