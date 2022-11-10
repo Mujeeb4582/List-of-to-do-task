@@ -3,8 +3,8 @@ import LocalStorage from './mocks/localStorage.js';
 describe('localStorage', () => {
   it('Adds an item to the mock localStorage', () => {
     const localStorage = new LocalStorage();
-    const key = 'mockKey';
-    const value = 'stringValue';
+    const key = 'storeKey';
+    const value = 'storeValue';
 
     localStorage.setItem(key, value);
 
@@ -15,8 +15,8 @@ describe('localStorage', () => {
 
   it('gets the items from the mock localStorage', () => {
     const localStorage = new LocalStorage();
-    const key = 'mockKey';
-    const value = 'stringValue';
+    const key = 'storeKey';
+    const value = 'storeValue';
     localStorage.setItem(key, value);
 
     const receivedValue = localStorage.getItem(key);
