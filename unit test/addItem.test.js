@@ -11,7 +11,7 @@ function addInputDescription(value, input) {
 }
 
 describe('add item', () => {
-  it('creates a container element inside the listSection', () => {
+  it('creates a container element inside the task list', () => {
     createMockDocument('description-1');
     localStorage.clear();
     const taskSection = document.querySelector('.task-list');
@@ -23,7 +23,7 @@ describe('add item', () => {
     );
   });
 
-  it('creates a task list element inside the list container', () => {
+  it('creates a task list element inside the task-list-container', () => {
     todo.allTodos = [];
     createMockDocument('description-2');
     localStorage.clear();
@@ -36,7 +36,7 @@ describe('add item', () => {
     ).toEqual('todo');
   });
 
-  it('adds the exact number of task elements to the list container ', () => {
+  it('adds the exact number of task elements to the task-list-container ', () => {
     todo.allTodos = [];
     createMockDocument('description-3');
     localStorage.clear();
